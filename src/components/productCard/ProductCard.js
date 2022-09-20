@@ -18,7 +18,7 @@ export default function ProductCard(p) {
          o declarandolo entre parentesis {children}
          */ }
       </Button>
-      <Counter />
+      <Counter stock={p.stock} />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import {useState} from 'react'
 
 
 
-export default function Counter() {
+export default function Counter(p) {
 
   const[clickCount, setClickCount] = useState(1)  
   
@@ -16,9 +16,9 @@ export default function Counter() {
   function handleClickLess(){
     setClickCount(clickCount-1)
    }
-  if(clickCount>15){
-    alert('solo hay 15 en stock')
-    setClickCount(15)
+  if(clickCount> p.stock){
+    alert('solo hay ' + (p.stock) + ' en stock')
+    setClickCount(p.stock)
   } else if(clickCount<1){
     alert('debe seleccionar minimo un producto')
     setClickCount(1)
@@ -28,9 +28,9 @@ export default function Counter() {
   return (
     <div className='first-container'>
     
-    <button onClick={handleClickPlus} className='plus-bottom'>mas</button>
+    <button onClick={handleClickPlus} className='plus-bottom'>+</button>
     <div className='count-container'>{clickCount}</div>
-    <button onClick={handleClickLess} className='less-bottom'>menos</button>
+    <button onClick={handleClickLess} className='less-bottom'>-</button>
     
     </div> 
   ) 
