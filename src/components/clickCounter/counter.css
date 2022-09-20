@@ -1,14 +1,14 @@
 .first-container{
-  padding: 0%;
+  padding: 2%;
   margin: 0%;
   display: flex;
   flex-direction: row-reverse;
   
-  justify-content: center;
+  justify-content: space-between;
   align-self: center;
   border: solid 2px;
-  /* width: 800px;
-  height: 50px; */
+  width: 150px;
+  
   background-color: white;
 }
 .plus-button{
@@ -17,8 +17,8 @@
   
 }
 .count-container{
-  width: 300px;
-  border: solid 2px;
+  
+  /* border: solid 2px; */
   height: 100%;
   
 }

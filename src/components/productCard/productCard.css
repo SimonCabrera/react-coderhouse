@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   width: 200px;
-  height: 320px;
+  height: 350px;
   border: solid 2px;
   border-radius: 5%;
   margin: 15px;
@@ -11,12 +11,12 @@
   background-color: white;
   transition: all .3s ease;
 }
-.card-container:hover{
+/* .card-container:hover{
   width: 210px;
-  height: 320px;
+  height: 370px;
   color: white;
   background-color: black;
-}
+} */
 .img-product{
   width: 150px;
   height: 150px;

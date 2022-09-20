@@ -1,6 +1,7 @@
 import React from 'react'
 import './productCard.css'
 import Button from '../button/Button'
+import Counter from '../clickCounter/Counter'
 
 export default function ProductCard(p) {
   
@@ -17,6 +18,7 @@ export default function ProductCard(p) {
          o declarandolo entre parentesis {children}
          */ }
       </Button>
+      <Counter />
     </div>
   )
 }
