@@ -9,20 +9,18 @@ export default function Counter(p) {
   const[clickCount, setClickCount] = useState(1)  
   
   function handleClickPlus(){
-  setClickCount(clickCount+1)
-  
+    if(clickCount>= p.stock){
+      alert('solo hay ' + (p.stock) + ' en stock')
+    return
   }
+  setClickCount(clickCount+1)}
    
   function handleClickLess(){
-    setClickCount(clickCount-1)
-   }
-  if(clickCount> p.stock){
-    alert('solo hay ' + (p.stock) + ' en stock')
-    setClickCount(p.stock)
-  } else if(clickCount<1){
-    alert('debe seleccionar minimo un producto')
-    setClickCount(1)
-  }
+    if(clickCount<=1){
+      alert('debe seleccionar minimo un producto')
+      return
+   }setClickCount(clickCount-1)}
+  
 
 
   return (
