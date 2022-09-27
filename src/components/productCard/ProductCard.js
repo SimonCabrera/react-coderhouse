@@ -10,7 +10,7 @@ export default function ProductCard(p) {
       <h3 className='product-title'>{p.title}</h3>
       <img src={p.img} className='img-product'></img>
       <p>${p.price}</p>
-      <Button text='Comprar'>
+      <Button text='Agregar al carrito'>
          ver mas 
          {/*
          todo lo que va dentro de la etiqueta del componente pasa como prop de tipo children 
