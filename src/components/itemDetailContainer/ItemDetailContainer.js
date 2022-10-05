@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { getSingleItem } from "../productList/ProductList"
+import { GetProductById } from "../productList/ProductList"
 
 function ItemDetailContainer(){
   let [data, setData] = useState({});
+  
   const {id} = useParams();
 
   useEffect(() =>{
-    getSingleItem(id).then((importData) => setData(importData));
-  },[]);
+    GetProductById(id).then((importData) => setData(importData));
+  },[id]);
 
   return (
     <div>
