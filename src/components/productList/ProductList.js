@@ -174,7 +174,7 @@ const products = [
 ];
 
 export function getAllProducts () {
-  console.log("hola desde getallprod")
+  
   return new Promise((resolve) => {
   setTimeout(() => {
     resolve(products);

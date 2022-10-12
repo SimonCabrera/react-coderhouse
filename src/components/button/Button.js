@@ -13,7 +13,7 @@ export default function Button(p) {
 
   function handleClick() {
     /*alert('Clickeado!!')*/
-    setColor("orangered");
+    setColor("blue");
     /* setColortoggle(!colortoggle) */
   }
 
