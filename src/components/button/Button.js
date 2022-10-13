@@ -12,8 +12,10 @@ export default function Button(p) {
   /* const color = "lightblue" */
 
   function handleClick() {
+    
+    p.onClick();
     /*alert('Clickeado!!')*/
-    setColor("blue");
+    setColor(p.color)
     /* setColortoggle(!colortoggle) */
   }
 

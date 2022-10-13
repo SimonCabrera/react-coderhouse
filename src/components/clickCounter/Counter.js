@@ -1,14 +1,14 @@
 import React from "react";
 import "./counter.css";
 import { useState } from "react";
-import ItemDetailContainer from "../itemDetailContainer/ItemDetailContainer";
+import Button from "../button/Button";
 
-export default function Counter(p) {
+export default function Counter({ product, onAddToCart }) {
   const [clickCount, setClickCount] = useState(1);
 
   function handleClickPlus() {
-    if (clickCount >= p.stock) {
-      alert("solo hay " + p.stock + " en stock");
+    if (clickCount >= product.stock) {
+      alert("solo hay " + product.stock + " en stock");
       return;
     }
     setClickCount(clickCount + 1);
@@ -21,22 +21,15 @@ export default function Counter(p) {
     }
     setClickCount(clickCount - 1);
   }
-  function handleAddToCart(clickCount){
-    alert(`agregaste al carrito! ${clickCount}`)
-  }
 
   return (
     <div className="main-container">
       <div className="first-container">
-        <button onClick={handleClickPlus} className="plus-bottom">
-          +
-        </button>
+        <Button onClick={handleClickPlus} className="plus-bottom" text="+" color='white' />
         <div className="count-container">{clickCount}</div>
-        <button onClick={handleClickLess} className="less-bottom">
-          -
-        </button>
+        <Button onClick={handleClickLess} className="less-bottom" text="-" color='white'/>
       </div>
-      <button onClick={() => handleAddToCart(clickCount)}>Agregar al carrito</button>
+      <Button onClick={() => onAddToCart(clickCount)} text="agregar al carrito" color='white'/>
     </div>
   );
 }

@@ -11,7 +11,10 @@ function ItemDetailContainer(){
   useEffect(() =>{
     GetProductById(id).then((importData) => setData(importData));
   },[id]);
-
+function handleAddToCart(clickCount){
+    alert(`agregaste al carrito! ${clickCount}`);
+    
+  }
   
   return (
     <div>
@@ -19,7 +22,7 @@ function ItemDetailContainer(){
       <h1>{data.title}</h1>
       <h1>$ {data.price}</h1>
       <h2>{data.detail}</h2>
-      <Counter stock={data.stock} />
+      <Counter product={data.stock} onAddToCart={handleAddToCart} />
     </div>
 
   )}
