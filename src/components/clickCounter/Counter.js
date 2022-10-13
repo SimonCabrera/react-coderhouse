@@ -3,12 +3,12 @@ import "./counter.css";
 import { useState } from "react";
 import Button from "../button/Button";
 
-export default function Counter({ product, onAddToCart }) {
+export default function Counter( {stock, onAddToCart}) {
   const [clickCount, setClickCount] = useState(1);
 
   function handleClickPlus() {
-    if (clickCount >= product.stock) {
-      alert("solo hay " + product.stock + " en stock");
+    if (clickCount >= stock) {
+      alert("solo hay " + stock + " en stock");
       return;
     }
     setClickCount(clickCount + 1);
