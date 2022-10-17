@@ -22,11 +22,9 @@ export default function Button(p) {
   return (
     <button
       style={{ backgroundColor: color }}
-      /* style={{backgroundColor: colortoggle? 'lightblue' : 'purple'}} */
       onClick={handleClick}
       type="button"
-      className="btn"
-    >
+      className="btn">
       {p.text}
     </button>
   );

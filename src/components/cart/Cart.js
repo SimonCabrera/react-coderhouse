@@ -1,8 +1,9 @@
-import carrito from './images/carrito.png'
+
 import './cart.css'
+
 function Cart() {
   return(
-    <img src={carrito} className="carrito"></img>
+    <h1>welcome to cart</h1>
   )
   
 }

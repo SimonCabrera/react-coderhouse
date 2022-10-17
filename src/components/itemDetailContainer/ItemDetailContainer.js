@@ -26,8 +26,9 @@ function ItemDetailContainer() {
       <h1>{data.title}</h1>
       <h1>$ {data.price}</h1>
       <h2>{data.detail}</h2>
-      {estadoCart === false ? 
-        <Counter stock={data.stock} onAddToCart={handleAddToCart} /> : <button>finalizar compra</button>}
+
+      {/* RENDERING CONDICIONAL  */}
+      {estadoCart === false ? <Counter stock={data.stock} onAddToCart={handleAddToCart} /> : <Button text='finalizar compra' />}
     </div>
   );
 }

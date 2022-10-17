@@ -1,7 +1,7 @@
 import logo from './images/logonike.png'
-import Cart from '../cart/Cart'
 import './header.css'
 import { Link } from "react-router-dom";
+import carrito from './images/carrito.png'
 const NavBar = () => {
   return(
     <header>
@@ -21,7 +21,7 @@ const NavBar = () => {
           
         </ul>
       </nav>
-      <Cart />
+      <Link to='/cart/'><img src={carrito} className="carrito"></img></Link>
       
     </header>
   )
