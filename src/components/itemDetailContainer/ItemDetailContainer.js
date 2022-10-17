@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Button from "../button/Button";
 import Counter from "../clickCounter/Counter";
 import { GetProductById } from "../productList/ProductList";
-
+import { Link } from "react-router-dom";
 function ItemDetailContainer() {
   let [data, setData] = useState({});
 
@@ -28,7 +28,7 @@ function ItemDetailContainer() {
       <h2>{data.detail}</h2>
 
       {/* RENDERING CONDICIONAL  */}
-      {estadoCart === false ? <Counter stock={data.stock} onAddToCart={handleAddToCart} /> : <Button text='finalizar compra' />}
+      {estadoCart === false ? <Counter stock={data.stock} onAddToCart={handleAddToCart} /> : <Link to='/cart/'><Button text='finalizar compra' /></Link>}
     </div>
   );
 }
