@@ -21,7 +21,7 @@ const NavBar = () => {
           
         </ul>
       </nav>
-      <Link to='/cart/'><img src={carrito} className="carrito"></img></Link>
+      <Link to='/cart'><img src={carrito} className="carrito"></img></Link>
       
     </header>
   )
