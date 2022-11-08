@@ -1,12 +1,11 @@
 import React from 'react'
 import './productCard.css'
-import Button from '../button/Button'
-import Counter from '../clickCounter/Counter'
+
 import {Link} from "react-router-dom"
 
 
 export default function ProductCard(p) {
-const urlDetalle = `/detail/${p.id}${p.title}`  
+const urlDetalle = `/detail/${p.id}` ; 
   return (
     <div className='card-container'>
       <h3 className='product-title'>{p.title}</h3>

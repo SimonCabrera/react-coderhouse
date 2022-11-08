@@ -2,7 +2,7 @@ import "./App.css";
 import NavBar from "./components/header/Header";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer";
-import ProductListContainer from "./components/productContainer/ProductListContainer";
+import ProductListContainer from "./components/itemContainer/ItemListContainer";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/cart/Cart";

@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 // 1- importamos e inicializamos nuestro CreateContext
-const cartCtx = createContext();
+const  cartCtx = createContext();
 
 // 2- definimos nuestro provider
 export default function CartContextProvider({ children }) {
